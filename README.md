@@ -37,6 +37,7 @@ https://raw.githubusercontent.com/banni-pub/banni-isbn-checker-tool-info/main/ve
 |---|---|
 | 남은 날 **31일 이상** | 아무 말도 안 한다 |
 | 남은 날 **30일 이하** | `사용 기한이 N일 남았습니다 (2027-08-17).` |
+| **그 날 당일** | `사용 기한이 오늘까지입니다 (2027-08-17).` |
 | 그 날짜가 **지나면** | `사용 기한이 지났습니다 (2027-08-17). 담당자에게 문의해 주세요.` |
 
 미리 알리는 것은 **조용히 만료되는 것이 제일 나쁘기 때문이다.**
@@ -44,6 +45,9 @@ https://raw.githubusercontent.com/banni-pub/banni-isbn-checker-tool-info/main/ve
 
 고치는 방법은 이 저장소에서 `version.json` 을 편집하고 `main` 에 올리는 것뿐이다.
 조회기는 **다음 실행 때** 새 값을 읽는다 — 돌고 있는 창은 그대로다.
+
+> ⚠ `raw.githubusercontent.com` 은 `max-age=300` 으로 답한다.
+> **올린 뒤 최대 5분은 옛 값이 나간다** — 급한 알림을 이 파일에 기대지 않는다.
 
 ---
 

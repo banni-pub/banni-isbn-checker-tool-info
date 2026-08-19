@@ -1,5 +1,6 @@
 {
   "enabled": true,
   "minVersion": "1.0.0",
-  "message": "새 버전으로 업데이트해 주세요."
+  "message": "새 버전으로 업데이트해 주세요.",
+  "expired_at": "2027-08-17"
 }

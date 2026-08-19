@@ -17,7 +17,8 @@ https://raw.githubusercontent.com/banni-pub/banni-isbn-checker-tool-info/main/ve
 {
   "enabled": true,
   "minVersion": "1.0.0",
-  "message": "새 버전으로 업데이트해 주세요."
+  "message": "새 버전으로 업데이트해 주세요.",
+  "expired_at": "2027-08-17"
 }
 ```
 
@@ -26,6 +27,20 @@ https://raw.githubusercontent.com/banni-pub/banni-isbn-checker-tool-info/main/ve
 | `enabled` | `false` 로 바꾸면 조회기가 **「이 도구는 더 이상 쓰지 않습니다」**라고 알린다 |
 | `minVersion` | 이 값보다 **낮은** 판으로 돌고 있으면 알린다. 같거나 높으면 조용하다 |
 | `message` | 위 둘 중 하나라도 걸렸을 때 **그대로 보여 줄 문장** |
+| `expired_at` | 사용 기한. `YYYY-MM-DD` **그 날까지는 쓸 수 있다** |
+
+### `expired_at` 은 문구를 따로 낸다
+
+`message` 를 빌려 쓰지 않는다 — 그러면 기한이 지났는데 「업데이트해 주세요」가 뜬다.
+
+| 언제 | 뜨는 말 |
+|---|---|
+| 남은 날 **31일 이상** | 아무 말도 안 한다 |
+| 남은 날 **30일 이하** | `사용 기한이 N일 남았습니다 (2027-08-17).` |
+| 그 날짜가 **지나면** | `사용 기한이 지났습니다 (2027-08-17). 담당자에게 문의해 주세요.` |
+
+미리 알리는 것은 **조용히 만료되는 것이 제일 나쁘기 때문이다.**
+날짜는 조회기가 도는 **기계의 달력**으로 견준다.
 
 고치는 방법은 이 저장소에서 `version.json` 을 편집하고 `main` 에 올리는 것뿐이다.
 조회기는 **다음 실행 때** 새 값을 읽는다 — 돌고 있는 창은 그대로다.
